@@ -14,7 +14,7 @@ public class Programa {
 		System.out.println("Cadastro de Time");
 		System.out.print("Digite a sigla: ");
 		String sigla = leia.next();
-		System.out.println("Digite a Descrição: ");
+		System.out.print("Digite a Descrição: ");
 		String descricao = leia.next();
 		
 		Time time = new Time(sigla, descricao);
@@ -35,11 +35,11 @@ public class Programa {
 			Jogador jog = new Jogador(numero, nome, posicao);
 			time.adJogador(jog);
 			
-			System.out.print("Deseja conmtinuar? <S/N>");
-			resposta = leia.next().charAt(0);
+			System.out.print("Deseja conmtinuar? <S/N> ");
+			resposta = leia.next().toUpperCase().charAt(0);
 			
 			
-		}while(resposta == 'S' || resposta == 's');
+		}while(resposta == 'S');
 		
 		System.out.println("DADOS DO TIME");
 		
